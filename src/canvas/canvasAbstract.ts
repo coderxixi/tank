@@ -20,18 +20,12 @@ export default abstract class CanvasAbStraw {
     this.app.insertAdjacentElement('afterbegin', this.el)
   }
   //绘制模型
-  protected drawModels(num: number) {
+  protected drawModels(num: number,model:any) {
     //渲染多少个模型
     this.positionCollection(num).forEach((postion) => {
-
-      this.canvas.drawImage(image.get('straw')!, postion.x, postion.y, config.model.width, config.model.height)
-
+      //绘制模型
+      new model(this.canvas,postion.x,postion.y)
     })
-    //  //渲染多少个模型
-    // Array(num).fill('').forEach(()=>{
-    //   const postion=this.postion();
-    // })
-
   }
   //批量获取唯一坐标
   protected positionCollection(num: number) {
