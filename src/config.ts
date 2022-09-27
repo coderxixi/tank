@@ -10,7 +10,7 @@ export default {
     height: 30
   },
   starw:{
-    num:30,
+    num:20,
   },
   //游戏贴图
   images: {
