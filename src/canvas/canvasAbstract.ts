@@ -22,9 +22,16 @@ export default abstract class  CanvasAbStraw {
     const img=document.createElement('img');
     img.src=imgUrl;
     img.onload=()=>{
-      this.canvas.drawImage(img,0,0,50,50)
+      const postion=this.postion()
+      this.canvas.drawImage(img,postion.x,postion.y,config.model.width,config.model.height)
     }
-   
+  }
+  //草地的随机位置
+  protected postion(){
+    return {
+      x:120,
+      y:240
+    }
   }
 }
 
