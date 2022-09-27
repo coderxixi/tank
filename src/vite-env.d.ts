@@ -9,15 +9,15 @@ interface BulletModelConstructor {
 }
 
 interface IModel {
-  name: string
+  // name: string
   render(): void
-  tank?: IModel
-  x: number
-  y: number
-  width: number
-  height: number
-  direction: string
-  destroy(): void
+  // tank?: IModel
+  // x: number
+  // y: number
+  // width: number
+  // height: number
+  // direction: string
+  // destroy(): void
 }
 
 interface ICanvas {

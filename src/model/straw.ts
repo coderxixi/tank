@@ -1,8 +1,13 @@
 import modelAbstract from "./modelAbstract"
+import { image } from "../service/image";
 //草地的类
-export default class straw extends modelAbstract{
+export default class straw extends modelAbstract implements IModel{
   render(): void {
-    super.draw()
+   
+    const img=image.get('straw')!
+    console.log('straw',img);
+    
+    super.draw(img)
   }
 
   
