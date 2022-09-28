@@ -3,6 +3,7 @@ import model from "../model/tank";
 import CanvasAbStraw from "./canvasAbstract";
 import position from "../service/postion"
 
+
 class Tank extends CanvasAbStraw implements ICanvas{
 
   constructor() {
@@ -17,9 +18,20 @@ class Tank extends CanvasAbStraw implements ICanvas{
   }
   render(): void {
     this.createModels()
-    super.renderModels();
-  
+    this.renderModels();
+    setInterval(()=>{
+      this.renderModels();
+    },100)
   }
+protected renderModels(){
+  this.canvas.clearRect(0,0,config.model.width,config.model.height)
+  this.models.forEach(model => {
+  console.log("model",model.image());
+    model.render()
+    this.canvas.drawImage(model.image(),model.x,model.y,config.model.width,config.model.height)
+  })
+}
+
   //绘制模型
   protected createModels() {
     //渲染多少个模型

@@ -3,7 +3,7 @@ import wall from "./static/images/wall/wall.gif"
 import water from "./static/images/water/water.gif"
 import steel from "./static/images/wall/steels.gif"
 import tankTop from "./static/images/tank/top.gif"
-import tankBotton from "./static/images/tank/bottom.gif"
+import tankBottom from "./static/images/tank/bottom.gif"
 import tankLeft from "./static/images/tank/left.gif"
 import tankRight from "./static/images/tank/right.gif"
 export default {
@@ -18,7 +18,7 @@ export default {
   },
   //草地的数量
   starw: {
-    num: 40,
+    num: 60,
   },
   //墙的数量
   wall: {
@@ -26,7 +26,7 @@ export default {
   },
   //水的数量
   water: {
-    num: 36
+    num: 66
   },
   //敌方坦克数量
   tank: {
@@ -34,7 +34,7 @@ export default {
   },
   //白色墙体
   steel: {
-    num: 40
+    num: 60
   },
   //游戏贴图
   images: {
@@ -48,7 +48,7 @@ export default {
     steel: steel,
     //坦克贴图
     tankTop,
-    tankBotton,
+    tankBottom,
     tankLeft,
     tankRight
   }

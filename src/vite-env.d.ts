@@ -13,8 +13,9 @@ interface IModel {
   render(): void
   
   // tank?: IModel
-  // x: number
-  // y: number
+  x: number
+  y: number
+  image():HTMLImageElement
   // width: number
   // height: number
   // direction: string

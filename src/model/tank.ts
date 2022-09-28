@@ -7,21 +7,16 @@ import config from "../config";
 export default class Tank extends modelAbstract implements IModel {
   name: string = "tank";
   //坦克方向
-  protected direction: diretionEnum = diretionEnum.bottom
+  // protected direction: diretionEnum = diretionEnum.bottom
 
   render(): void {
-    this.randomDirection()
-    // const img=image.get('tank')!
-    super.draw(this.randomImage())
-    setInterval(() => {
-      this.move()
-    }, 50)
+    this.move()
   }
-  //随机产生方向
-  randomDirection() {
-    this.direction = Object.keys(diretionEnum)[Math.floor(Math.random() * 4)] as diretionEnum
+  image(): HTMLImageElement {
+    let direction = this.name + _.upperFirst(this.direction)
+    return image.get(direction as keyof typeof config.images)!
+  }
 
-  }
   //让坦克运动
   protected move(): void {
     this.canvas.clearRect(this.x,this.y,config.model.width,config.model.height)
@@ -39,11 +34,8 @@ export default class Tank extends modelAbstract implements IModel {
         this.x -= 2
         break
     }
-    super.draw(this.randomImage())
+    // super.draw()
 
   }
-  randomImage() {
-    let direction = this.name + _.upperFirst(this.direction)
-    return image.get(direction as keyof typeof config.images)!
-  }
+ 
 }
