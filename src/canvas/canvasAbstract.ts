@@ -36,7 +36,7 @@ export default abstract class CanvasAbStrawel implements ICanvas {
   protected renderModels() {
     this.models.forEach(model => {
       model.render()
-      this.canvas.drawImage(model.image(),model.x,model.y,config.model.width,config.model.height)
+      // this.canvas.drawImage(model.image(),model.x,model.y,config.model.width,config.model.height)
     })
   }
 }

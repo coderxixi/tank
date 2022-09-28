@@ -7,7 +7,7 @@ export default class Water extends modelAbstract implements IModel{
   }
   name: string="Water";
   render(): void {
-    // super.draw()
+    super.draw()
   }
 
   

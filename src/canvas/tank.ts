@@ -30,6 +30,7 @@ protected renderModels(){
     model.render()
     this.canvas.drawImage(model.image(),model.x,model.y,config.model.width,config.model.height)
   })
+  // super.renderModels()
 }
 
   //绘制模型

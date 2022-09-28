@@ -8,7 +8,7 @@ export default class Steel extends modelAbstract implements IModel{
   name: string="steel";
   render(): void {
   
-    // super.draw()
+    super.draw()
   }
 
   

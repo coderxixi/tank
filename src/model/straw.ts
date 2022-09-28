@@ -7,7 +7,7 @@ export default class straw extends modelAbstract implements IModel{
   }
   name:string="straw";
   render(): void {
-    // super.draw()
+    super.draw()
   }
 
   

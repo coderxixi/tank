@@ -7,7 +7,7 @@ export default class Wall extends modelAbstract implements IModel{
   }
   name: string="Wall";
   render(): void {
-    // super.draw()
+    super.draw()
   }
 
   
