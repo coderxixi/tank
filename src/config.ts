@@ -1,5 +1,6 @@
 import straw from "./static/images/straw/straw.png"
 import wall from "./static/images/wall/wall.gif"
+import water from "./static/images/water/water.gif"
 export default {
   canvas: {
     width: 900,
@@ -18,12 +19,18 @@ export default {
   wall:{
     num:60
   },
+  //水的数量
+  water:{
+    num:16
+  },
   //游戏贴图
   images: {
     //草地的贴图
     straw: straw,
     //墙的贴图
-    wall :wall
+    wall :wall,
+    //水的贴图
+    water:water
   }
 
 }
