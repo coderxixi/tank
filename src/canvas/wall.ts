@@ -3,7 +3,7 @@ import model from "../model/wall";
 import CanvasAbStraw from "./canvasAbstract";
 
 
-class Wall extends CanvasAbStraw {
+class Wall extends CanvasAbStraw implements ICanvas{
 
   constructor() {
     super()

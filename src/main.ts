@@ -4,6 +4,7 @@ import straw from  "./canvas/straw";
 import wall from "./canvas/wall";
 import water from "./canvas/water";
 import steel from "./canvas/steel";
+import tank from "./canvas/tank"
 import { promises} from "./service/image";
 import config from "./config";
 
@@ -19,6 +20,7 @@ async function bootstrap(){
    //绘制水体
    water.render()
    steel.render()
+   tank.render()
 }
 
 void bootstrap()

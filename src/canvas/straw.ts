@@ -1,7 +1,7 @@
 import config from "../config";
 import model from "../model/straw";
 import CanvasAbStraw from "./canvasAbstract";
-class Straw extends CanvasAbStraw {
+class Straw extends CanvasAbStraw implements ICanvas {
 
   constructor() {
     super()

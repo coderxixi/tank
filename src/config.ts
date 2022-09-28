@@ -2,7 +2,7 @@ import straw from "./static/images/straw/straw.png"
 import wall from "./static/images/wall/wall.gif"
 import water from "./static/images/water/water.gif"
 import steel from "./static/images/wall/steels.gif"
-
+import tank from "./static/images/tank/top.gif"
 export default {
   canvas: {
     width: 900,
@@ -23,11 +23,15 @@ export default {
   },
   //水的数量
   water:{
-    num:16
+    num:36
+  },
+  //敌方坦克数量
+  tank:{
+    num:20
   },
   //白色墙体
   steel:{
-     num:20
+     num:40
   },
   //游戏贴图
   images: {
@@ -38,7 +42,9 @@ export default {
     //水的贴图
     water:water,
     //白色墙体的贴图
-    steel:steel
+    steel:steel,
+    //坦克贴图
+    tank:tank
   }
 
 }

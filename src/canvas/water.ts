@@ -3,7 +3,7 @@ import model from "../model/water";
 import CanvasAbStraw from "./canvasAbstract";
 
 
-class Wall extends CanvasAbStraw {
+class Water extends CanvasAbStraw implements ICanvas{
   constructor() {
     super()
 
@@ -22,4 +22,4 @@ class Wall extends CanvasAbStraw {
 
 }
 
-export default new Wall()
+export default new Water()

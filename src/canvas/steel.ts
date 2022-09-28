@@ -3,7 +3,7 @@ import model from "../model/steel";
 import CanvasAbStraw from "./canvasAbstract";
 
 
-class Straw extends CanvasAbStraw {
+class Steel extends CanvasAbStraw implements ICanvas {
   constructor() {
     super()
   }
@@ -21,4 +21,4 @@ class Straw extends CanvasAbStraw {
 
 }
 
-export default new Straw()
+export default new Steel()

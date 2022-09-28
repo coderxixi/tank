@@ -11,6 +11,7 @@ interface BulletModelConstructor {
 interface IModel {
   // name: string
   render(): void
+  
   // tank?: IModel
   // x: number
   // y: number
@@ -23,8 +24,8 @@ interface IModel {
 interface ICanvas {
   model(): ModelConstructor | BulletModelConstructor
   num(): number
-  ctx: CanvasRenderingContext2D
-  removeModel(model: IModel): void
-  renderModels(): void
-  stop?(): void
+  // ctx: CanvasRenderingContext2D
+  // removeModel(model: IModel): void
+  // renderModels(): void
+  // stop?(): void
 }
