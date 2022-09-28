@@ -1,5 +1,5 @@
 import config from "../config";
-type mapKey=keyof typeof config.images
+export type mapKey=keyof typeof config.images
 export const image=new Map<mapKey,HTMLImageElement>();
 
 export const promises = Object.entries(config.images).map(([key,value])=>{

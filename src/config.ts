@@ -2,7 +2,10 @@ import straw from "./static/images/straw/straw.png"
 import wall from "./static/images/wall/wall.gif"
 import water from "./static/images/water/water.gif"
 import steel from "./static/images/wall/steels.gif"
-import tank from "./static/images/tank/top.gif"
+import tankTop from "./static/images/tank/top.gif"
+import tankBotton from "./static/images/tank/bottom.gif"
+import tankLeft from "./static/images/tank/left.gif"
+import tankRight from "./static/images/tank/right.gif"
 export default {
   canvas: {
     width: 900,
@@ -14,37 +17,40 @@ export default {
     height: 30
   },
   //草地的数量
-  starw:{
-    num:40,
+  starw: {
+    num: 40,
   },
   //墙的数量
-  wall:{
-    num:60
+  wall: {
+    num: 60
   },
   //水的数量
-  water:{
-    num:36
+  water: {
+    num: 36
   },
   //敌方坦克数量
-  tank:{
-    num:20
+  tank: {
+    num: 20
   },
   //白色墙体
-  steel:{
-     num:40
+  steel: {
+    num: 40
   },
   //游戏贴图
   images: {
     //草地的贴图
     straw: straw,
     //墙的贴图
-    wall :wall,
+    wall: wall,
     //水的贴图
-    water:water,
+    water: water,
     //白色墙体的贴图
-    steel:steel,
+    steel: steel,
     //坦克贴图
-    tank:tank
+    tankTop,
+    tankBotton,
+    tankLeft,
+    tankRight
   }
 
 }
