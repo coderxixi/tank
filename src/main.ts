@@ -3,6 +3,7 @@ import "./style.scss"
 import straw from  "./canvas/straw";
 import wall from "./canvas/wall";
 import water from "./canvas/water";
+import steel from "./canvas/steel";
 import { promises} from "./service/image";
 import config from "./config";
 
@@ -17,7 +18,7 @@ async function bootstrap(){
    straw.render();
    //绘制水体
    water.render()
-   
+   steel.render()
 }
 
 void bootstrap()
