@@ -32,7 +32,7 @@ class  position{
   protected postion() {
     return {
       x: Math.floor(Math.random() * (config.canvas.width / config.model.width)) * config.model.width,
-      y: Math.floor(Math.random() * (config.canvas.height / config.model.height)-5) * config.model.height+config.model.height*2,
+      y: Math.floor(Math.random() * ((config.canvas.height / config.model.height)-5) *config.model.height)+(config.model.height*2),
     }
   }
 }

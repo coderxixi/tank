@@ -3,13 +3,22 @@ import model from "../model/wall";
 import CanvasAbStraw from "./canvasAbstract";
 
 
-class Wall extends CanvasAbStraw  {
-constructor(){
-  super()
-  super.createModels(config.wall.num,model)
-}
+class Wall extends CanvasAbStraw {
+
+  constructor() {
+    super()
+
+  }
+  num(): number {
+    return config.wall.num
+  }
+  model(): ModelConstructor {
+    return model
+  }
   render(): void {
-   super.renderModels()
+    super.createModels()
+    super.renderModels();
+  
   }
 
 }

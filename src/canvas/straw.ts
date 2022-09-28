@@ -1,15 +1,22 @@
 import config from "../config";
 import model from "../model/straw";
 import CanvasAbStraw from "./canvasAbstract";
+class Straw extends CanvasAbStraw {
 
+  constructor() {
+    super()
 
-class Straw extends CanvasAbStraw  {
-constructor(){
-  super()
-  super.createModels(config.starw.num,model)
-}
+  }
+  num(): number {
+    return config.starw.num
+  }
+  model(): ModelConstructor {
+    return model
+  }
   render(): void {
-   super.renderModels()
+    super.createModels()
+    super.renderModels()
+   
   }
 
 }

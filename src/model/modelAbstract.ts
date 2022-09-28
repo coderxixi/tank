@@ -6,8 +6,6 @@ export default  abstract class modelAbstract {
   constructor(protected canvas:CanvasRenderingContext2D,protected x:number,protected y:number){
   }
   protected  draw(img:HTMLImageElement){
-    console.log('img',img);
-    
     this.canvas.drawImage(img!,this.x, this.y, config.model.width, config.model.height)
     
   }

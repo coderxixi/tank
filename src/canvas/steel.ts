@@ -3,13 +3,20 @@ import model from "../model/steel";
 import CanvasAbStraw from "./canvasAbstract";
 
 
-class Straw extends CanvasAbStraw  {
-constructor(){
-  super()
-  super.createModels(config.starw.num,model)
-}
+class Straw extends CanvasAbStraw {
+  constructor() {
+    super()
+  }
+  num(): number {
+     return config.steel.num
+  }
+  model(): ModelConstructor {
+    return model
+  }
+
   render(): void {
-   super.renderModels()
+    super.createModels()
+    super.renderModels()
   }
 
 }

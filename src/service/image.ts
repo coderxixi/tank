@@ -7,11 +7,7 @@ export const promises = Object.entries(config.images).map(([key,value])=>{
       const img=document.createElement('img');
       img.src=value;
       img.onload=()=>{
-        console.log(key,img);
-        
        image.set(key as mapKey,img);
-       console.log(value);
-       
         resolve(img)
       }
     }})    

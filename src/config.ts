@@ -27,7 +27,7 @@ export default {
   },
   //白色墙体
   steel:{
-     num:10
+     num:20
   },
   //游戏贴图
   images: {

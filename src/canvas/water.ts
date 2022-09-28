@@ -3,13 +3,21 @@ import model from "../model/water";
 import CanvasAbStraw from "./canvasAbstract";
 
 
-class Wall extends CanvasAbStraw  {
-constructor(){
-  super()
-  super.createModels(config.water.num,model)
-}
+class Wall extends CanvasAbStraw {
+  constructor() {
+    super()
+
+  }
+  num(): number {
+    return config.water.num
+  }
+  model(): ModelConstructor {
+    return model
+  }
   render(): void {
-   super.renderModels()
+    super.createModels()
+    super.renderModels()
+   
   }
 
 }
