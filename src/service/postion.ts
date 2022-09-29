@@ -9,7 +9,6 @@ class  position{
     const collection = [] as { x: number, y: number }[];
     for (let i = 0; i < num; i++) {
 
-
       while (true) {
         const postion = this.postion();
         const exists = collection.some((c) => {
@@ -21,11 +20,8 @@ class  position{
           this.collection.push(postion)
           break
         }
-
       }
-
     }
-
     return collection
   }
   //草地的随机位置

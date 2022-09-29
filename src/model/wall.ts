@@ -9,6 +9,4 @@ export default class Wall extends modelAbstract implements IModel{
   render(): void {
     super.draw()
   }
-
-  
 }

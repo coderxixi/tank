@@ -9,10 +9,8 @@ export default abstract class CanvasAbStrawel implements ICanvas {
     protected app = document.querySelector('#app') as HTMLDivElement,
     protected el = document.createElement('canvas'),
     protected canvas = el.getContext('2d')!
-
   ) {
     this.createCanvas()
-
   }
   //创建画布
   protected createCanvas() {
@@ -27,9 +25,7 @@ export default abstract class CanvasAbStrawel implements ICanvas {
       //绘制模型
       const model = this.model();
       const instance = new model(this.canvas, postion.x, postion.y);
-
       this.models.push(instance)
-
     })
   }
   //将模型渲染到画布上

@@ -9,6 +9,4 @@ export default class Water extends modelAbstract implements IModel{
   render(): void {
     super.draw()
   }
-
-  
 }

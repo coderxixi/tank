@@ -1,13 +1,9 @@
 import config from "../config";
 import model from "../model/wall";
 import CanvasAbStraw from "./canvasAbstract";
-
-
 class Wall extends CanvasAbStraw implements ICanvas{
-
   constructor() {
     super()
-
   }
   num(): number {
     return config.wall.num
@@ -18,9 +14,7 @@ class Wall extends CanvasAbStraw implements ICanvas{
   render(): void {
     super.createModels()
     super.renderModels();
-  
   }
-
 }
 
 export default new Wall()

@@ -11,7 +11,6 @@ export default  abstract class modelAbstract {
   }
   protected draw(){
     this.canvas.drawImage(this.image(),this.x, this.y, config.model.width, config.model.height)
-    
   }
     //随机产生方向
   protected randomDirection() {
