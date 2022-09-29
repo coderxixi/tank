@@ -26,6 +26,12 @@ export default class Tank extends modelAbstract implements IModel {
         this.x += 2
         break
       case diretionEnum.bottom:
+        if(this.y>config.canvas.height-config.model.height){
+          this.direction=diretionEnum.bottom
+          this.y-=2
+          console.log('超出边界了');
+          return
+        }
         this.y += 2
         break
       case diretionEnum.left:
@@ -35,3 +41,4 @@ export default class Tank extends modelAbstract implements IModel {
     // super.draw()
   }
 }
+//
