@@ -13,6 +13,10 @@ export default class Tank extends modelAbstract implements IModel {
   // protected direction: diretionEnum = diretionEnum.bottom
   render(): void {
     // super.draw()
+    //增加向下移动的概率
+    if(_.random(20)==1){
+      this.direction=diretionEnum.bottom
+    }
     this.move()
   }
   image(): HTMLImageElement {

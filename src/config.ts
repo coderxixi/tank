@@ -31,7 +31,7 @@ export default {
   },
   //敌方坦克数量
   tank: {
-    num: 20
+    num: 60
   },
   //白色墙体
   steel: {
