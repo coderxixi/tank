@@ -18,28 +18,41 @@ export default class Tank extends modelAbstract implements IModel {
   }
   //让坦克运动
   protected move(): void {
-    this.canvas.clearRect(this.x,this.y,config.model.width,config.model.height)
-    switch (this.direction) {
-      case diretionEnum.top:
-        this.y --
+   
+    this.canvas.clearRect(this.x, this.y, config.model.width, config.model.height)
+    while(true){
+      let x = this.x;
+      let y = this.y;
+      switch (this.direction) {
+        case diretionEnum.top:
+          y--
+          break
+        case diretionEnum.right:
+          x++
+          break
+        case diretionEnum.bottom:
+          y++
+          break
+        case diretionEnum.left:
+          x--
+          break
+      }
+      if(this.isTouch(x,y)===true){
+        this.randomDirection()
+      }else{
+        this.x=x;
+        this.y=y;
         break
-      case diretionEnum.right:
-        this.x ++
-        break
-      case diretionEnum.bottom:
-        if(this.y>config.canvas.height-config.model.height){
-          this.direction=diretionEnum.bottom
-          this.y--
-          console.log('超出边界了');
-          return
-        }
-        this.y ++
-        break
-      case diretionEnum.left:
-        this.x --
-        break
+      }
     }
+   
     super.draw()
+  }
+  //碰撞检测
+  protected isTouch(x:number,y:number) {
+    if(x==0||x+this.width>config.canvas.width||y<0||y+this.height>config.canvas.height){
+      return true
+    }
   }
 }
 //
