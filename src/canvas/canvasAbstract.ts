@@ -1,7 +1,7 @@
 import config from "../config"
 import postion from "../service/postion";
 export default abstract class CanvasAbStrawel implements ICanvas {
-  protected models: IModel[] = []
+ public models: IModel[] = []
   abstract render(): void
   abstract num(): number
   abstract model(): ModelConstructor

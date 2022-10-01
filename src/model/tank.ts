@@ -3,6 +3,9 @@ import { image } from "../service/image";
 import { diretionEnum } from "../enum/positionEnum"
 import _ from "lodash"
 import config from "../config";
+import water from "../canvas/water";
+import wall from "../canvas/wall";
+import steel from "../canvas/steel";
 //草地的类
 export default class Tank extends modelAbstract implements IModel {
   name: string = "tank";
@@ -49,10 +52,16 @@ export default class Tank extends modelAbstract implements IModel {
     super.draw()
   }
   //碰撞检测
-  protected isTouch(x:number,y:number) {
+  protected isTouch(x:number,y:number):boolean {
     if(x==0||x+this.width>config.canvas.width||y<0||y+this.height>config.canvas.height){
       return true
     }
+    const models=[...water.models,...wall.models,...steel.models]
+    return models.some((model)=>{
+     const state=x+this.width<=model.x||x>=model.x+model.width||y+this.height<=model.y||y>=model.y+model.height;
+     return !state
+    })
+    return false
   }
 }
 //

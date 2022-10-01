@@ -7,7 +7,7 @@ import tankBottom from "./static/images/tank/bottom.gif"
 import tankLeft from "./static/images/tank/left.gif"
 import tankRight from "./static/images/tank/right.gif"
 export default {
-  timeout:50,
+  timeout:10,
   canvas: {
     width: 900,
     height: 600

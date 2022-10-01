@@ -16,8 +16,8 @@ interface IModel {
   x: number
   y: number
   image():HTMLImageElement
-  // width: number
-  // height: number
+  width: number
+  height: number
   // direction: string
   // destroy(): void
 }
