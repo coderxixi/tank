@@ -2,6 +2,7 @@ import config from "../config";
 import model from "../model/tank";
 import CanvasAbStraw from "./canvasAbstract";
 import position from "../service/postion"
+
 class Tank extends CanvasAbStraw implements ICanvas{
   constructor() {
     super()
@@ -17,7 +18,7 @@ class Tank extends CanvasAbStraw implements ICanvas{
     this.renderModels();
     setInterval(()=>{
       this.renderModels();
-    },100)
+    },config.timeout)
   }
 protected renderModels(){
   this.canvas.clearRect(0,0,config.model.width,config.model.height)

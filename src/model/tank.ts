@@ -9,6 +9,7 @@ export default class Tank extends modelAbstract implements IModel {
   //坦克方向
   // protected direction: diretionEnum = diretionEnum.bottom
   render(): void {
+    // super.draw()
     this.move()
   }
   image(): HTMLImageElement {
@@ -20,25 +21,25 @@ export default class Tank extends modelAbstract implements IModel {
     this.canvas.clearRect(this.x,this.y,config.model.width,config.model.height)
     switch (this.direction) {
       case diretionEnum.top:
-        this.y -= 2
+        this.y --
         break
       case diretionEnum.right:
-        this.x += 2
+        this.x ++
         break
       case diretionEnum.bottom:
         if(this.y>config.canvas.height-config.model.height){
           this.direction=diretionEnum.bottom
-          this.y-=2
+          this.y--
           console.log('超出边界了');
           return
         }
-        this.y += 2
+        this.y ++
         break
       case diretionEnum.left:
-        this.x -= 2
+        this.x --
         break
     }
-    // super.draw()
+    super.draw()
   }
 }
 //
