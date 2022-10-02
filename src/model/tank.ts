@@ -18,6 +18,7 @@ export default class Tank extends modelAbstract implements IModel {
       this.direction=diretionEnum.bottom
     }
     this.move()
+    
   }
   image(): HTMLImageElement {
     let direction = this.name + _.upperFirst(this.direction)
