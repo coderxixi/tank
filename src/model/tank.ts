@@ -6,8 +6,10 @@ import config from "../config";
 import water from "../canvas/water";
 import wall from "../canvas/wall";
 import steel from "../canvas/steel";
+import tank from "../canvas/tank";
 //草地的类
 export default class Tank extends modelAbstract implements IModel {
+ canvas: ICanvas=tank;
   name: string = "tank";
   //坦克方向
   // protected direction: diretionEnum = diretionEnum.bottom
@@ -27,7 +29,7 @@ export default class Tank extends modelAbstract implements IModel {
   //让坦克运动
   protected move(): void {
    
-    this.canvas.clearRect(this.x, this.y, config.model.width, config.model.height)
+    this.canvas.ctx.clearRect(this.x, this.y, config.model.width, config.model.height)
     while(true){
       let x = this.x;
       let y = this.y;

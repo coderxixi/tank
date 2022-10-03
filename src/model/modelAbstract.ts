@@ -2,17 +2,18 @@ import config from "../config"
 
 import { diretionEnum } from "../enum/positionEnum"
 export default  abstract class modelAbstract {
-  abstract name:string
+   protected  abstract name:string
   abstract render():void
   abstract image():HTMLImageElement
   public width=config.model.width;
   public height=config.model.height;
   protected direction: diretionEnum = diretionEnum.top
-  constructor(protected canvas:CanvasRenderingContext2D,public x:number,public y:number){
+  abstract canvas:ICanvas
+  constructor(public x:number,public y:number){
     this.randomDirection()
   }
   protected draw(){
-    this.canvas.drawImage(this.image(),this.x, this.y, config.model.width, config.model.height)
+    this.canvas.ctx.drawImage(this.image(),this.x, this.y, config.model.width, config.model.height)
   }
     //随机产生方向
   protected randomDirection() {

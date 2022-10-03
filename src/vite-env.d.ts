@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ModelConstructor {
-  new (canvas:CanvasRenderingContext2D, x: number, y: number):IModel
+  new ( x: number, y: number):IModel
 }
 
 interface BulletModelConstructor {
@@ -25,6 +25,7 @@ interface IModel {
 interface ICanvas {
   model(): ModelConstructor | BulletModelConstructor
   num(): number
+  ctx:CanvasRenderingContext2D
   // ctx: CanvasRenderingContext2D
   // removeModel(model: IModel): void
   // renderModels(): void

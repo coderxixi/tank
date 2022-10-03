@@ -21,10 +21,10 @@ class Tank extends CanvasAbStraw implements ICanvas{
     },config.timeout)
   }
 protected renderModels(){
-  this.canvas.clearRect(0,0,config.model.width,config.model.height)
+  this.ctx.clearRect(0,0,config.model.width,config.model.height)
   this.models.forEach(model => {
   model.render()
-  this.canvas.drawImage(model.image(),model.x,model.y,config.model.width,config.model.height)
+  this.ctx.drawImage(model.image(),model.x,model.y,config.model.width,config.model.height)
   })
   // super.renderModels()
 }
@@ -35,7 +35,7 @@ protected renderModels(){
         //绘制模型
         const pos=position.postion()
         const model = this.model();
-        const instance = new model(this.canvas,pos.x, 0);
+        const instance = new model(pos.x, 0);
         this.models.push(instance)
     }
   }
