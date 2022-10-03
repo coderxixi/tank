@@ -6,6 +6,7 @@ export default abstract class CanvasAbStrawel implements ICanvas {
   abstract num(): number
   abstract model(): ModelConstructor
   constructor(
+    protected name:string,
     protected app = document.querySelector('#app') as HTMLDivElement,
     protected el = document.createElement('canvas'),
     public ctx = el.getContext('2d')!
@@ -16,6 +17,7 @@ export default abstract class CanvasAbStrawel implements ICanvas {
   protected createCanvas() {
     this.el.width = config.canvas.width;
     this.el.height = config.canvas.height;
+    this.el.setAttribute('name',this.name)
     this.app.insertAdjacentElement('afterbegin', this.el)
   }
   //绘制模型

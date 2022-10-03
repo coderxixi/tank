@@ -4,9 +4,6 @@ import CanvasAbStraw from "./canvasAbstract";
 import position from "../service/postion"
 
 class Tank extends CanvasAbStraw implements ICanvas{
-  constructor() {
-    super()
-  }
   num(): number {
     return config.tank.num
   }
@@ -40,4 +37,4 @@ protected renderModels(){
     }
   }
 }
-export default new Tank()
+export default new Tank("tank")

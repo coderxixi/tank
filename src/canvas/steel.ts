@@ -2,9 +2,6 @@ import config from "../config";
 import model from "../model/steel";
 import CanvasAbStraw from "./canvasAbstract";
 class Steel extends CanvasAbStraw implements ICanvas {
-  constructor() {
-    super()
-  }
   num(): number {
      return config.steel.num
   }
@@ -17,4 +14,4 @@ class Steel extends CanvasAbStraw implements ICanvas {
   }
 }
 
-export default new Steel()
+export default new Steel("steel")

@@ -2,9 +2,6 @@ import config from "../config";
 import model from "../model/bullet";
 import CanvasAbStraw from "./canvasAbstract";
  export default new class Bullet extends CanvasAbStraw implements ICanvas {
-  constructor() {
-    super()
-  }
   num(): number {
      return 0
   }
@@ -15,6 +12,6 @@ import CanvasAbStraw from "./canvasAbstract";
     super.createModels()
     super.renderModels()
   }
-}()
+}('bullet')
 
 // export default new Bullet()
