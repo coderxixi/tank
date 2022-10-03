@@ -5,6 +5,7 @@ import wall from "./canvas/wall";
 import water from "./canvas/water";
 import steel from "./canvas/steel";
 import tank from "./canvas/tank"
+import bullet from "./canvas/bullet";
 import { promises} from "./service/image";
 import config from "./config";
 
@@ -21,6 +22,7 @@ async function bootstrap(){
    water.render()
    steel.render()
    tank.render()
+   bullet.render()
 }
 
 void bootstrap()
