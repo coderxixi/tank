@@ -4,7 +4,7 @@ export default abstract class CanvasAbStrawel implements ICanvas {
  public models: IModel[] = []
   abstract render(): void
   abstract num(): number
-  abstract model(): ModelConstructor
+  abstract model(): ModelConstructor|BulletModelConstructor
   constructor(
     protected name:string,
     protected app = document.querySelector('#app') as HTMLDivElement,

@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ModelConstructor {
-  new ( x: number, y: number):IModel
+  new ( x: number, y: number):IModel 
 }
 
 interface BulletModelConstructor {
@@ -11,8 +11,7 @@ interface BulletModelConstructor {
 interface IModel {
   // name: string
   render(): void
-  
-  // tank?: IModel
+  tank?: IModel
   x: number
   y: number
   image():HTMLImageElement
