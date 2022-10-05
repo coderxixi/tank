@@ -6,6 +6,7 @@ export default new class Bullet extends CanvasAbStraw implements ICanvas {
   num(): number {
     return 0
   }
+  
   model(): BulletModelConstructor {
     return model
   }
